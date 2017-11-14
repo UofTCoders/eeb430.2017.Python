@@ -1,6 +1,7 @@
 # eeb430.2017.Python
 
 ## Study Objectives 
+
 - What is the effect of weaning age on adult mass?
 - What is the effect of litter size on weaning time?
 - What is the effect of litter size on lifespan?
