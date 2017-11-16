@@ -1,0 +1,143 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+install.packages("dplyr")
+```
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+mammals <- mammal_data
+mammals
+```
+
+
+```{r}
+mammals %>%
+  ggplot(aes(x=gestation.mo., y=weaning.mo.)) +
+  geom_point() +
+  geom_smooth(method = 'loess')
+```
+
+```{r}
+mammals %>%
+    ggplot(aes(x=max..life.mo., y=weaning.mo.)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5)
+```
+
+```{r}
+mammals %>%
+    ggplot(aes(x=AFR.mo., y = weaning.mo.)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5)
+```
+
+```{r}
+mammals %>%
+    group_by(order) %>%
+    tally() %>%
+    filter(n > 30)
+```
+
+```{r}
+orders <- mammals %>%
+    filter(order == 'Artiodactyla' | order == 'Carnivora' | order == 'Cetacea' | order == 'Insectivora' | order == 'Lagomorpha' | order == 'Primates' | order == 'Rodentia' )
+orders
+```
+
+```{r}
+orders %>%
+    ggplot(aes(x=gestation.mo., y=weaning.mo.)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5)
+```
+#NICE TREND!
+
+
+
+```{r}
+orders %>%
+    ggplot(aes(x=AFR.mo., y=weaning.mo.)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5) +
+    facet_wrap(~ order)
+```
+
+```{r}
+orders %>%
+    mutate(offspring.year = litter.size * litters.year) %>% 
+    ggplot(aes(x=offspring.year, y=gestation.mo., color = order)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5)
+```
+
+```{r}
+orders %>%
+    mutate(offspring.year = litter.size * litters.year) %>% 
+    ggplot(aes(x=offspring.year, y=gestation.mo.)) +
+               geom_point() +
+    geom_smooth()
+```
+#NICE TREND TOO!
+
+
+
+```{r}
+orders %>%
+    filter(mass.g. > 50000) %>% 
+    ggplot(aes(x=mass.g., y=newborn.g.)) +
+    geom_point() +
+    geom_smooth()
+```
+
+```{r}
+orders %>%
+    filter(order == "Rodentia") %>% 
+    ggplot(aes(x=AFR.mo., y=max..life.mo.)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5) +
+    facet_wrap(~ order) +
+    team_theme()
+```
+
+```{r}
+library(ggthemes)
+team_theme <- function() {list(
+    
+    theme(axis.line = element_line(color = "black"),
+          text = element_text(size=8, family="Times"),
+          panel.background=element_rect(fill='white', color='black'),
+          panel.grid.major=element_blank(),
+          panel.grid.minor=element_blank(),
+          plot.title=element_text(color="black", size=14, hjust=0.5),
+          legend.text=element_text(size=12, family="Times")),
+    scale_colour_colorblind()
+)}
+```
+
+```{r}
+install.packages("broom")
+```
+```{r}
+library(broom)
+```
+
+
+```{r}
+fit <- glm(gestation.mo. ~ weaning.mo. + AFR.mo. + max..life.mo. + litter.size + litters.year, data=orders)
+tidy(fit, conf.int=TRUE)
+```
+
+```{r}
+0.185-0.132
+0.132-0.0797
+```
+
+

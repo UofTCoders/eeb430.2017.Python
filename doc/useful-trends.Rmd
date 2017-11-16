@@ -1,0 +1,55 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+orders %>%
+    mutate(offspring.year = litter.size * litters.year) %>% 
+    ggplot(aes(x=offspring.year, y=weaning.mo.)) +
+               geom_point() +
+    geom_smooth(method='loess', alpha=0.5)
+```
+#correlation between offspring/year and weaning time
+
+```{r}
+orders %>%
+    ggplot(aes(x=gestation.mo., y=weaning.mo.)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5)
+```
+#correlation between gestation time and weaning time
+
+```{r}
+orders %>%
+    ggplot(aes(x=AFR.mo., y=max..life.mo.)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5)
+```
+#correlation between age of first reproduction and adult lifespan
+
+```{r}
+orders %>%
+    mutate(offspring.year = litter.size * litters.year) %>%
+    ggplot(aes(x=AFR.mo., y=offspring.year)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5)
+```
+#correlation between age of first reproduction and offspring/year
+
+```{r}
+orders %>%
+    ggplot(aes(x=max..life.mo., y=AFR.mo.)) +
+    geom_point() +
+    geom_smooth(method='loess', alpha=0.5)
+```
+#correlation between max lifespan and age of first reproduction
+
+```{r}
+orders %>%
+    mutate(offspring.year = litter.size * litters.year) %>%
+    ggplot(aes(y=max..life.mo., x=offspring.year)) +
+    geom_point()
+```
+#correlation between offspring/year and max lifespan
+
