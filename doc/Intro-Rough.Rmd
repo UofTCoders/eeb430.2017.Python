@@ -1,0 +1,16 @@
+---
+title: "Intro Outline"
+output: html_notebook
+---
+
+**Intro Outline**
+- Basics of parent-offspring conflict --> Carter
+- General mammal life history --> Smooj
+- Post-birth development --> Farida
+- Gestation --> Ben
+
+**Timeline**
+- Literature summary finished by November 26
+- Intro written by November 30
+
+
