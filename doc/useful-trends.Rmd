@@ -4,6 +4,20 @@ output: html_notebook
 ---
 
 ```{r}
+library(tidyverse)
+```
+
+
+
+
+```{r}
+mammals <- mammal_data
+orders <- mammals %>%
+    filter(order == 'Artiodactyla' | order == 'Carnivora' | order == 'Cetacea' | order == 'Insectivora' | order == 'Lagomorpha' | order == 'Primates' | order == 'Rodentia' )
+```
+
+
+```{r}
 orders %>%
     mutate(offspring.year = litter.size * litters.year) %>% 
     ggplot(aes(x=offspring.year, y=weaning.mo.)) +
