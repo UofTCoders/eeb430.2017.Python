@@ -1,0 +1,39 @@
+---
+title: "Weaning Paper Summaries"
+author: "Farida Samad-zada"
+date: '27 ноября 2017 г '
+output: html_document
+---
+In my section of introduction, I focus on post-birth resource allocations by the mother.
+
+##Classic Paper on Parent-Offspring Conflict by R.L. Trivers 
+As first summarized by Trivers in 1974, parents and offspring do not usually have the same interests, when it comes to allocating resources. Parents want to maximize their lifetime reproductive output, which is achieved by equally distributing the resources between the siblings, and by rationalizing resources between current and future (potential) offspring.  This happens because each offspring is more related to itself, than it is to any of its siblings, and mother is related to all the offspring equally.  Trivers uses graphs and equations to explain the phenomenon; however it can be simplified to cost-benefit ratios.  Right after birth, the interests of mother and offspring agree with respect to amount of care that she provides. However, as the time goes the cost of providing nutrition increases for mother, and the benefit decreases for the offspring (as it can feed on its own).  When C/B is 1, the mother wants to terminate the care, but the offspring wants to terminate the care only when C/B is  2. Thus, a conflict arises when C/B is between 1 and 2. This window can be relatively short for fast developing mammals, and long for slow developing mammals. During this window,  offspring use various signalling strategies in order to manipulate the mother to allocate more resources towards it. 
+Citation: Trivers R.L. 1974. Parent-Offspring Conflict.  Amer. Zool. 14:249-264.
+
+##Selfish Pups: Weaning Conflict and Milk Theft in Free-Ranging Dogs
+-	This paper focuses on weaning conflict in Canis familiaris
+-	Suckling behaviour was observed in pups since birth, and the weaning period was estimated to happen at 7th through 13th week of age, i.e. mothers refused to nurse, when the pups reached the age of 7 weeks
+-	They ran a GLMM model, which showed that there exists a three-way interaction between idenitity of suckling initiator, pup age and litter size
+-	As pups grow in age, the amount of suckling initiations by pups increase, and initiations by mother decrease
+-	Pups have been shown to be involved in milk theft, i.e. nursing from unrelated lactating females 
+Citation: Manabi P. and Bhadra A. Selfish Pups: Weaning Conflict and Milk Theft in Free-Ranging Dogs.  PLOS One, 12(2): e0170590.
+
+
+
+##Maternal care in house mice (Mus muscukus): II. The energy cost of lactation as a function of litter size
+-	This paper  evaluate lactation performance in house mice,  in relation to litter size
+-	For larger litter size, the female increased both the total milk production, and the amount of nutrients present in milk 
+-	Mortality was higher for larger litter size, possibly the females adjust the litter size in order to optimize the ratio of milk production cost to the litter size 
+Citation: Kounig B., Riester J., Markl H. Maternal care in house mice (Mus muscukus): II. The energy cost of lactation as a function of litter size.  Journal of Zoology 216(2): 195-210
+
+##Lactation, maternal behavior and infant growthin common marmoset monkeys (Callithrix jacchus): effects of maternal size and litter size
+-	This paper focuses on lactation tradeoffs in marmosets 
+-	Maternal size(i.e. body weight of the mother) plays an important role in determining lactation performance
+-	Smaller mother produced “lower-quality” milk (milk has less fat & gross energy)
+-	Smaller mother nursed their offspring less frequently than larger mothers
+-	This relationship has been especially evident, when smaller mothers produced twins (i.e. increased litter size)
+-	Small mothers that produced twins quickly lost weight during lactation period
+-	Small mothers with twins were more likely to be ill & less likely to be fertile for the next breeding season
+-	Large mothers were more optimized for offspring production, since in marmosets optimal litter size is 2 (when singleton is produced, it doesn’t grow faster than if it had a twin) 
+Citation:   Tardif S., Power M.,  Oftedal O.T., Power R.A., Layne D.G. Lactation, maternal behavior and infant growthin common marmoset monkeys (Callithrix jacchus): effects of maternal size and litter size. Behavioral Ecology and Sociobiology 51(1): 17-25
+
