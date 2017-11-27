@@ -1,0 +1,46 @@
+---
+title: "General Mammalian Life History Literature Summary"
+output: html_notebook
+---
+For this part in the introduction I stated broad and focused on the costs of reproduction in mammals. I started off my saying there is cost and then I went more into the fast-slow continuum theory and how mammals are found all throughout the spectrum and I found two article that listed one species at one end of the spectrum and another on the other end of the spectrum. I feel like we can build off this "cost of reproduction seen in mammals"" and the fact that mammals differ on the continuum to lead into parent-offspring conflicts. 
+
+# Trade-Offs in Life History Evolution (Stearns, 1989)
+Most prominent life-history trade-off involves the cost of reproduction. Has two major components the costs paid in survival and costs paid in future reproduction 
+
+NS acts on fitness, and favours a combo of life history traits that max fitness 
+	- Stearns, S. C. 1989. Trade-offs in life history evolution. Functional Ecology. 3(3):259-268. 
+	
+# The fast-slow continuum and mammalian life-history patterns: an empirical evaluation
+The fast-slow continuum is where species that mature early, have large reproductive rates and short generation times - they are on the fast end of the spectrum. Species that mature late have short reproductive rates and long generation times (slow).
+
+Used published life-history data (138 populations of mammals) and a developed partial life-cycle model to quantify and characterize the tempe of life-histories in mammals 
+	- Used F(avg age of fertility) /alpha (avg time to adulthood) to quantify the position of mammalian pops along the continuum   
+Found:
+	- 29/138 mammal populations are fast 
+	- 31/138 are slow
+	- 29/138 are medium 
+	- Slow mammals usually had large bodies, high juvenile and adult survival rates, low fertility, and long lifespans
+	- Fast mammals were the opposite and had fast population growths compared to slow and medium mammals. The growth rate was more sensitive to changes in reproduction but not really to survival 
+	- Slow mammals were insensitive to changes in reproductive parameters but more sensitive to changes in survival.
+	Citation: Oli, M. 2004. The fast-slow continuum and mammalian life-history patterns: an empirical evaluation. BASIC AND APPLIED ECOLOGY. 5(5):449-463
+	
+# Who pays? Intra- versus inter-generational costs of reproduction 
+Examined how age of first reproduction influences fitness within and between generations in golden-mantled ground squirrels 
+Expected early AFR would 
+	a) Reduce longevity, reproductive lifespan, avg litter size, lifetime number of reproductive events, and lifetime measures of fitness within a generation
+	b) Reduce daughters probs of surviving to maturity and lifetime fitness measures and components 
+Found:
+	1. Benefit of earlier AFR - since females who delayed AFR did not reproduce more frequently and did not produce larger litters this indicated that there is a cost for delaying reproduction. Benefits of early AFR (first year of maturity) exceeds the costs of GMGS. 
+Citation:Moore, J.F. Wells, C.P. Van Vuren, D.H.Oli, M.K. 2016. Who pays? intra-versus inter-generational costs of reproduction. ECOSPHERE. 7(2):e01236.
+
+# Evaluation of reproductive costs for Weddell seals in Erebus Bay, Antarctica 
+These seals intermittent breeders where some breed annually for many consecutive years and others remain as nonbreeders for several years inbw breeding years 
+
+Evaluated both the cost of survival and the cost of future reproduction in female Weddell seals  
+	- Predicted that climate and sea-ice fluctuations would induce greater variability in costs to reproduction probabilities than in survival costs but should see a cost in both
+Results:
+	- Strong indication of the presence of reproductive costs to both survival and breeding probability - nonbreeder survival was consistently 3% higher than breeder survival - this results in a great difference in mean life span
+	- The approximate max life span for breeders is around 10 years whereas for nonbreeders it was around 16.7 years 
+	- First time breeders were 20-40% less likely to breed the next year in comparison to experienced breeders suggesting there is a cost to reproduction.  
+	
+	Citation: Hadley, G.L. Rotella, J.J. Garrott, R.A. 2007. Evaluation of reproductive costs for weddell seals in Erebus Bay, Antarctica. JOURNAL OF ANIMAL ECOLOGY. 76(3):448-458. 
