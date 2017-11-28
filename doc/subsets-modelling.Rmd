@@ -1,0 +1,42 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+mammals <- mammal_data
+orders <- mammals %>%
+    filter(order == 'Artiodactyla' | order == 'Carnivora' | order == 'Cetacea' | order == 'Insectivora' | order == 'Lagomorpha' | order == 'Primates' | order == 'Rodentia' )
+```
+#initial data subset including only orders w/ large sample size
+
+```{r}
+orders1 <- orders %>%
+    mutate(offspring.year = litter.size * litters.year) %>%
+    mutate(log.oy = log(offspring.year)) %>%
+    mutate(log.AFR = log(AFR.mo.))
+
+orders1
+```
+#data subset for oy-afr model
+
+
+```{r}
+orders2 <- orders1 %>%
+    mutate(log.ml = log(max..life.mo.))
+
+orders2 %>%
+    ggplot(aes(x=log.oy, y=log.ml)) +
+    geom_point()
+```
+#data subset for oy-ml model
+
+```{r}
+orders.again <- orders %>%
+    mutate(offspring.year = litter.size * litters.year) %>%
+    mutate(log.oy = log(offspring.year)) %>%
+    mutate(log.wm = log(weaning.mo.))
+
+orders.again
+```
+#data subset for oy-wm model
