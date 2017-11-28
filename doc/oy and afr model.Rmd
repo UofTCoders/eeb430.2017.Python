@@ -18,7 +18,8 @@ orders %>%
     mutate(offspring.year = litter.size * litters.year) %>%
     ggplot(aes(x=log(AFR.mo.), y=log(offspring.year))) +
     geom_point() +
-    geom_smooth(method='loess', alpha=0.5)
+    geom_smooth(method='loess', alpha=0.5)+
+  team_theme()
 ```
 
 ```{r}
@@ -30,7 +31,8 @@ broom::augment(b) %>%
     ggplot(aes(x=log.AFR, y=.fixed)) +
     geom_line() +
     geom_point(aes(x=log.AFR, y=log.oy)) +
-    geom_line(aes(y=.fitted, color=order))
+    geom_line(aes(y=.fitted, color=order))+
+  team_theme()
 ```
 
 
