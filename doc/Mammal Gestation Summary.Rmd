@@ -3,8 +3,8 @@ title: "Mammal Gestation Summary"
 output: html_notebook
 ---
 
-##Paper 1:
-###Kurta A., Kunz T. 1987. Size of bats at birth and maternal investment during pregnancy. Zoological Symposium. 57: 79-106
+## Paper 1
+### Kurta A., Kunz T. 1987. Size of bats at birth and maternal investment during pregnancy. Zoological Symposium. 57: 79-106
 
 This study looked at the relationship between the body mass of the mother and the newborn in bats. This was done as the authors noted that revious studys on this trend in mammals have never lloked at the trends for bats.For the study the relationship between the two age classes was used as a way to infer maternal investment. This was done measuring the mass of the litter, and seeing what proportion it is of the mother's body mass.
 
@@ -12,8 +12,8 @@ In species where the litter size was one, the individual mass of the neoborn was
 
 Large neonates were found to result from longer gestation periods, and there are greater benefits to the offspring when being born with a larger body mass. A larger body size will decrease the loss of heat, and the individual will then experience smaller and less rapid changes in body temp. 
 
-##Paper 2:
-###Martin R., MacLarnon A. 1985. Gestation period, neonatal size and maternal investment in placental mammals. Nature. 313(17): 220-223.
+## Paper 2
+### Martin R., MacLarnon A. 1985. Gestation period, neonatal size and maternal investment in placental mammals. Nature. 313(17): 220-223.
 
 The relationships between neonatal size, gestation time, and the size of the mother depends on if the young of the species are altricial or precocial. This paper shows that there is a significant difference between the two groups of neonates for gestation period. 
 
@@ -24,22 +24,22 @@ Can also use litter size as a way of determining if alt vs prec. If litter size 
 
 Obseved shorter gestation periods in alt species, and higher maternal investments.
 
-##Paper 3:
-###Boyd I. 1996. Individual variation in the duration of pregnancy and birth data in Antarctic fur seals: the role of environment.
+## Paper 3
+### Boyd I. 1996. Individual variation in the duration of pregnancy and birth data in Antarctic fur seals: the role of environment.
 
 Pregnancy length is consitent within species, there is little variation. In seals, it was found that the total duration of the pregnancy was unaffected by age of the mother, sex of offspring or the mass of neonate at birth.
 
 Length of pregnancy was found to be correlated to the total food available to the mother. Pregnancies were observed to be longer in years where food shortages occured. Additionally, length of pregnancy was found to differ between year to year and this was attributed to varitations in environmental conditions. These include food availbility and water temperature (longer period when temperatures were colder).
 
-##Paper 4: 
-###Gittleman J., Thompson S. 1988. Energy allocation in mammalian reproduction. American Zoology. 28(3): 863-875. 
+## Paper 4
+### Gittleman J., Thompson S. 1988. Energy allocation in mammalian reproduction. American Zoology. 28(3): 863-875. 
 
 The major energy costs associated with gestation involve the development of new tissues that needed to produce the neonate. These tissues include: fetal, uterine, placental, and mammary. Additionally, there are maintanence costs associated with these tissues that arise during this time. The costs associtated with the development of this tissues have been difficult to determine outside of a lab setting, so neonate body mass has been used as to infer unterine and placental mass.
 
 It has been also observed that the costs associated to gestation are less than those related to lactation. From this it is proposed that milk production has higher energy costs. 
 
-##Paper 5:
-###Sacher G., Staffeldt E. 1974. Relation of gestation time to brain weight for placental mammals: implications for the theory of vertebrate growth. The American Naturalist. 108(963): 593-615. 
+## Paper 5
+### Sacher G., Staffeldt E. 1974. Relation of gestation time to brain weight for placental mammals: implications for the theory of vertebrate growth. The American Naturalist. 108(963): 593-615. 
 
 This paper found that there is a linear increase in brain mass as the gestation time increases, but there is a large amount of variation in this trend with in mammalian orders. Growth trends within orders will differ due to having altricial or precocial young. This is thought to be the cause of the within order varitaion. 
 
