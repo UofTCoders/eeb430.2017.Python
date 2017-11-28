@@ -9,7 +9,8 @@ orders2 <- orders1 %>%
 
 orders2 %>%
     ggplot(aes(x=log.oy, y=log.ml)) +
-    geom_point()
+    geom_point()+
+  team_theme()
 ```
 
 ```{r}
@@ -21,5 +22,6 @@ broom::augment(c) %>%
     ggplot(aes(x=log.oy, y=.fixed)) +
     geom_line() +
     geom_point(aes(x=log.oy, y=log.ml)) +
-    geom_line(aes(y=.fitted, color=order))
+    geom_line(aes(y=.fitted, color=order))+
+  team_theme()
 ```
