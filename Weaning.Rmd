@@ -33,7 +33,7 @@ Citation: Kounig B., Riester J., Markl H. Maternal care in house mice (*Mus musc
 ## Lactation, maternal behavior and infant growthin common marmoset monkeys (*Callithrix jacchus*): effects of maternal size and litter size 
 
 -	This paper focuses on lactation tradeoffs in marmosets 
--	Maternal size(i.e. body weight of the mother) plays an important role in determining lactation performance
+-	Maternal size (i.e. body weight of the mother) plays an important role in determining lactation performance
 -	Smaller mother produced “lower-quality” milk (milk has less fat & gross energy)
 -	Smaller mother nursed their offspring less frequently than larger mothers
 -	This relationship has been especially evident, when smaller mothers produced twins (i.e. increased litter size)
