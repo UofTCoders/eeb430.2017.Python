@@ -1,0 +1,41 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+```
+
+```{r}
+mammals <- mammal_data
+```
+
+
+
+```{r}
+orders2 <- orders1 %>%
+    mutate(log.ml = log(max..life.mo.))
+
+orders2 %>%
+    ggplot(aes(x=log.oy, y=log.ml)) +
+    geom_point()
+```
+
+```{r}
+library(lme4)
+library(Matrix)
+library(broom)
+```
+
+
+```{r}
+c <- lmer(log.ml ~ log.oy + (log.oy | order), data=orders2)
+summary(c)
+lme4::ranef(c)
+tidy(c, conf.int=TRUE)
+broom::augment(c) %>%
+    ggplot(aes(x=log.oy, y=.fixed)) +
+    geom_line() +
+    geom_point(aes(x=log.oy, y=log.ml, color = order)) +
+    geom_line(aes(y=.fitted, color=order))
+```
