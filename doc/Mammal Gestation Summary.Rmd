@@ -43,4 +43,4 @@ It has been also observed that the costs associated to gestation are less than t
 
 This paper found that there is a linear increase in brain mass as the gestation time increases, but there is a large amount of variation in this trend with in mammalian orders. Growth trends within orders will differ due to having altricial or precocial young. This is thought to be the cause of the within order varitaion. 
 
-THe authors belive that neonate brain mass should be used instead of neonate body mass when looking at trends related to gestation. This is because the brain is the slowest developing organ in the young, and that the groth of other tissues in the body are limited by the growth of the brain.
+The authors belive that neonate brain mass should be used instead of neonate body mass when looking at trends related to gestation. This is because the brain is the slowest developing organ in the young, and that the groth of other tissues in the body are limited by the growth of the brain.
