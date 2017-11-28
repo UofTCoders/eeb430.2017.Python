@@ -15,7 +15,7 @@ Citation: Trivers R.L. 1974. Parent-Offspring Conflict.  Amer. Zool. 14:249-264.
 
 ## Selfish Pups: Weaning Conflict and Milk Theft in Free-Ranging Dogs
 
--	This paper focuses on weaning conflict in Canis familiaris
+-	This paper focuses on weaning conflict in *Canis familiaris*
 -	Suckling behaviour was observed in pups since birth, and the weaning period was estimated to happen at 7th through 13th week of age, i.e. mothers refused to nurse, when the pups reached the age of 7 weeks
 -	They ran a GLMM model, which showed that there exists a three-way interaction between idenitity of suckling initiator, pup age and litter size
 -	As pups grow in age, the amount of suckling initiations by pups increase, and initiations by mother decrease
@@ -24,13 +24,13 @@ Citation: Manabi P. and Bhadra A. Selfish Pups: Weaning Conflict and Milk Theft 
 
 
 
-## Maternal care in house mice (Mus muscukus): II. The energy cost of lactation as a function of litter size
+## Maternal care in house mice (*Mus muscukus*): II. The energy cost of lactation as a function of litter size
 -	This paper  evaluate lactation performance in house mice,  in relation to litter size
 -	For larger litter size, the female increased both the total milk production, and the amount of nutrients present in milk 
 -	Mortality was higher for larger litter size, possibly the females adjust the litter size in order to optimize the ratio of milk production cost to the litter size 
-Citation: Kounig B., Riester J., Markl H. Maternal care in house mice (Mus muscukus): II. The energy cost of lactation as a function of litter size.  Journal of Zoology 216(2): 195-210
+Citation: Kounig B., Riester J., Markl H. Maternal care in house mice (*Mus muscukus*): II. The energy cost of lactation as a function of litter size.  Journal of Zoology 216(2): 195-210
 
-## Lactation, maternal behavior and infant growthin common marmoset monkeys (Callithrix jacchus): effects of maternal size and litter size 
+## Lactation, maternal behavior and infant growthin common marmoset monkeys (*Callithrix jacchus*): effects of maternal size and litter size 
 
 -	This paper focuses on lactation tradeoffs in marmosets 
 -	Maternal size(i.e. body weight of the mother) plays an important role in determining lactation performance
@@ -40,5 +40,5 @@ Citation: Kounig B., Riester J., Markl H. Maternal care in house mice (Mus muscu
 -	Small mothers that produced twins quickly lost weight during lactation period
 -	Small mothers with twins were more likely to be ill & less likely to be fertile for the next breeding season
 -	Large mothers were more optimized for offspring production, since in marmosets optimal litter size is 2 (when singleton is produced, it doesn’t grow faster than if it had a twin) 
-Citation:   Tardif S., Power M.,  Oftedal O.T., Power R.A., Layne D.G. Lactation, maternal behavior and infant growthin common marmoset monkeys (Callithrix jacchus): effects of maternal size and litter size. Behavioral Ecology and Sociobiology 51(1): 17-25
+Citation:   Tardif S., Power M.,  Oftedal O.T., Power R.A., Layne D.G. Lactation, maternal behavior and infant growthin common marmoset monkeys (*Callithrix jacchus*): effects of maternal size and litter size. Behavioral Ecology and Sociobiology 51(1): 17-25
 
