@@ -4,7 +4,7 @@ output: html_notebook
 ---
 
 ```{r}
-mammals <- mammal_data
+mammals <- mammals
 orders <- mammals %>%
     filter(order == 'Artiodactyla' | order == 'Carnivora' | order == 'Cetacea' | order == 'Insectivora' | order == 'Lagomorpha' | order == 'Primates' | order == 'Rodentia' )
 ```
@@ -12,9 +12,9 @@ orders <- mammals %>%
 
 ```{r}
 orders1 <- orders %>%
-    mutate(offspring.year = litter.size * litters.year) %>%
+    mutate(offspring.year = litter_size * litters_inyear) %>%
     mutate(log.oy = log(offspring.year)) %>%
-    mutate(log.AFR = log(AFR.mo.))
+    mutate(log.AFR = log(AFR_mo))
 
 orders1
 ```
@@ -23,19 +23,17 @@ orders1
 
 ```{r}
 orders2 <- orders1 %>%
-    mutate(log.ml = log(max..life.mo.))
+    mutate(log.ml = log(max_.life_month))
 
-orders2 %>%
-    ggplot(aes(x=log.oy, y=log.ml)) +
-    geom_point()
+orders2
 ```
 #data subset for oy-ml model
 
 ```{r}
 orders.again <- orders %>%
-    mutate(offspring.year = litter.size * litters.year) %>%
+    mutate(offspring.year = litter_size * litters_inyear) %>%
     mutate(log.oy = log(offspring.year)) %>%
-    mutate(log.wm = log(weaning.mo.))
+    mutate(log.wm = log(weaning_month))
 
 orders.again
 ```
