@@ -13,7 +13,7 @@ orders.again
 ```
 
 ```{r}
-d <- lmer(log.oy ~ log.wm + (log.wm | order), data = orders.again)
+fit <- lmer(log.oy ~ log.wm + (log.wm | order), data = orders.again)
 summary(d)
 lme4::ranef(d)
 tidy(d, conf.int = TRUE)
@@ -24,7 +24,19 @@ broom::augment(d) %>%
     geom_line(aes(y = .fitted, color = order)) +
     team_theme()
 ```
-
-
+```{r}
+base <- glm(log.oy ~ log.wm , data=orders.again)
+summary(base)
+tidy(d, conf.int=TRUE)
+broom::augment(base) %>%
+    ggplot(aes(x=log.wm, y=.fitted)) +
+    geom_line() +
+    geom_point(aes(x=log.wm, y=log.oy)) +
+    geom_line(aes(y=.fitted)) +
+  team_theme()
+```
+```{r}
+MuMIn::model.sel(fit, base, rank=AIC)
+```
 
 
