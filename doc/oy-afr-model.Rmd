@@ -15,8 +15,8 @@ orders1
 
 ```{r}
 orders %>%
-    mutate(offspring_year = litter_size * litters_year) %>%
-    ggplot(aes(x=log(AFR_month), y=log(offspring_year))) +
+    mutate(offspring_year = litter_size * litters_inyear) %>%
+    ggplot(aes(x=log(AFR_mo), y=log(offspring_year))) +
     geom_point() +
     geom_smooth(method='loess', alpha=0.5)+
   team_theme()
