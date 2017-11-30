@@ -3,25 +3,48 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+#Load required packages
+```{r}
+library(tidyverse)
+library(lme4)
+library(Matrix)
+library(broom)
+library(ggthemes)
+```
+
+#Import 'mammals.csv' dataset from data file in eeb430.2017.Python repo
+
+#Filter data to include only orders with a large sample size
+```{r}
+mammals <- mammals
+orders <- mammals %>%
+    filter(order == 'Artiodactyla' | order == 'Carnivora' | order == 'Cetacea' | order == 'Insectivora' | order == 'Lagomorpha' | order == 'Primates' | order == 'Rodentia' )
+```
+
+#Create log-transformed data columns for variables to be used in the model
 ```{r}
 orders1 <- orders %>%
-    mutate(offspring.year = litter.size * litters.year) %>%
+    mutate(offspring.year = litter_size * litters_inyear) %>%
     mutate(log.oy = log(offspring.year)) %>%
-    mutate(log.AFR = log(AFR.mo.))
-
-orders1
+    mutate(log.AFR = log(AFR_mo))
 ```
 
-
+#Load graph theme
 ```{r}
-orders %>%
-    mutate(offspring.year = litter.size * litters.year) %>%
-    ggplot(aes(x=log(AFR.mo.), y=log(offspring.year))) +
-    geom_point() +
-    geom_smooth(method='loess', alpha=0.5)+
-  team_theme()
+team_theme <- function() {list(
+  
+  theme(axis.line = element_line(color = "black"),
+        text = element_text(size = 8, family = "Times"),
+        panel.background = element_rect(fill = 'white', colour = 'black'),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title = element_text(colour =  "black", size = 14, hjust = 0.5),
+        legend.text = element_text(size = 12, family = "Times")),
+  scale_colour_colorblind())
+}
 ```
 
+#Run mixed effects model using lme4
 ```{r}
 b <- lmer(log.oy ~ log.AFR + (log.AFR | order), data=orders1)
 summary(b)
@@ -31,8 +54,8 @@ broom::augment(b) %>%
     ggplot(aes(x=log.AFR, y=.fixed)) +
     geom_line() +
     geom_point(aes(x=log.AFR, y=log.oy)) +
-    geom_line(aes(y=.fitted, color=order))+
-  team_theme()
+    geom_line(aes(y=.fitted, color=order)) +
+    team_theme()
 ```
 
 
