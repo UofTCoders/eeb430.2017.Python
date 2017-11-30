@@ -4,6 +4,11 @@ output: html_notebook
 ---
 
 ```{r}
+library(tidyverse)
+library(ggplot2)
+library(lme4)
+library(broom)
+
 orders.again <- orders %>%
     mutate(offspring_year = litter_size * litters_inyear) %>%
     mutate(log.oy = log(offspring_year)) %>%
