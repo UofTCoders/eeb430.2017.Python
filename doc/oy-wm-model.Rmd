@@ -21,7 +21,7 @@ broom::augment(d) %>%
     ggplot(aes(x = log.wm, y = .fixed)) +
     geom_line() +
     geom_point(aes(x = log.wm, y = log.oy, color = order)) +
-    geom_line(aes(y = .fitted, color = order)) +
+    geom_line(aes(y = .fitted, color = order), alpha=0.15) +
     team_theme()
 ```
 ```{r}
