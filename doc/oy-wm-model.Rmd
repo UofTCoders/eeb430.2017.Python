@@ -3,32 +3,56 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+#Load required packages
 ```{r}
 library(tidyverse)
 library(ggplot2)
 library(lme4)
 library(broom)
-
+library(ggthemes)
+library(MuMIn)
+```
+#Import dataset from data file called 'mammals.csv' and subset to include only orders with a large sample size
+```{r}
+mammals <- mammals
+orders <- mammals %>%
+    filter(order == 'Artiodactyla' | order == 'Carnivora' | order == 'Cetacea' | order == 'Insectivora' | order == 'Lagomorpha' | order == 'Primates' | order == 'Rodentia' )
+```
+#Create log-transformed data columns for variables to be used in model
+```{r}
 orders.again <- orders %>%
     mutate(offspring_year = litter_size * litters_inyear) %>%
     mutate(log.oy = log(offspring_year)) %>%
     mutate(log.wm = log(weaning_month))
-
-orders.again
 ```
-
+#Load graph theme
 ```{r}
-d <- lmer(log.oy ~ log.wm + (log.wm | order), data = orders.again)
-summary(d)
-lme4::ranef(d)
-tidy(d, conf.int = TRUE)
-broom::augment(d) %>%
+team_theme <- function() {list(
+  
+  theme(axis.line = element_line(color = "black"),
+        text = element_text(size = 8, family = "Times"),
+        panel.background = element_rect(fill = 'white', colour = 'black'),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title = element_text(colour =  "black", size = 14, hjust = 0.5),
+        legend.text = element_text(size = 12, family = "Times")),
+  scale_colour_colorblind())
+}
+```
+#Run linear mixed effects model
+```{r}
+fit <- lmer(log.oy ~ log.wm + (log.wm | order), data = orders.again)
+summary(fit)
+lme4::ranef(fit)
+tidy(fit, conf.int = TRUE)
+broom::augment(fit) %>%
     ggplot(aes(x = log.wm, y = .fixed)) +
     geom_line() +
     geom_point(aes(x = log.wm, y = log.oy, color = order)) +
     geom_line(aes(y = .fitted, color = order), alpha=0.15) +
     team_theme()
 ```
+#Run linear model
 ```{r}
 base <- glm(log.oy ~ log.wm , data=orders.again)
 summary(base)
@@ -40,6 +64,7 @@ broom::augment(base) %>%
     geom_line(aes(y=.fitted)) +
   team_theme()
 ```
+#Compare fits of models
 ```{r}
 MuMIn::model.sel(fit, base, rank=AIC)
 ```
