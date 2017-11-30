@@ -42,8 +42,8 @@ tidy(b, conf.int=TRUE)
 broom::augment(b) %>%
     ggplot(aes(x=log.AFR, y=.fixed)) +
     geom_line() +
-    geom_point(aes(x=log.AFR, y=log.oy)) +
-    geom_line(aes(y=.fitted, color=order), alpha = 0.15)+
+    geom_point(aes(x=log.AFR, y=log.oy, color = orders), alpha = 0.15) +
+    geom_line(aes(y=.fitted, color=order))+
   team_theme()
 ```
 ```{r}
