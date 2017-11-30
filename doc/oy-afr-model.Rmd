@@ -5,9 +5,9 @@ output: html_notebook
 
 ```{r}
 orders1 <- orders %>%
-    mutate(offspring.year = litter.size * litters.year) %>%
-    mutate(log.oy = log(offspring.year)) %>%
-    mutate(log.AFR = log(AFR.mo.))
+    mutate(offspring_year = litter_size * litters_inyear) %>%
+    mutate(log.oy = log(offspring_year)) %>%
+    mutate(log.AFR = log(AFR_mo))
 
 orders1
 ```
@@ -15,10 +15,22 @@ orders1
 
 ```{r}
 orders %>%
-    mutate(offspring.year = litter.size * litters.year) %>%
-    ggplot(aes(x=log(AFR.mo.), y=log(offspring.year))) +
+    mutate(offspring_year = litter_size * litters_year) %>%
+    ggplot(aes(x=log(AFR_month), y=log(offspring_year))) +
     geom_point() +
     geom_smooth(method='loess', alpha=0.5)+
+  team_theme()
+```
+
+```{r}
+base <- glm(log.oy ~ log.AFR , data=orders1)
+summary(base)
+tidy(base, conf.int=TRUE)
+broom::augment(base) %>%
+    ggplot(aes(x=log.AFR, y=.fitted)) +
+    geom_line() +
+    geom_point(aes(x=log.AFR, y=log.oy)) +
+    geom_line(aes(y=.fitted)) +
   team_theme()
 ```
 
@@ -34,5 +46,6 @@ broom::augment(b) %>%
     geom_line(aes(y=.fitted, color=order))+
   team_theme()
 ```
-
-
+```{r}
+MuMIn::model.sel(b, base, rank=AIC)
+```
