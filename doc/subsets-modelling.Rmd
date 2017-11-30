@@ -23,7 +23,7 @@ orders1
 
 ```{r}
 orders2 <- orders1 %>%
-    mutate(log.ml = log(max_.life_month))
+    mutate(log.ml = log(max_life_month))
 
 orders2
 ```

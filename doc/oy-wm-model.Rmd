@@ -5,23 +5,24 @@ output: html_notebook
 
 ```{r}
 orders.again <- orders %>%
-    mutate(offspring.year = litter.size * litters.year) %>%
-    mutate(log.oy = log(offspring.year)) %>%
-    mutate(log.wm = log(weaning.mo.))
+    mutate(offspring.year = litter_size * litters_inyear) %>%
+    mutate(log.oy = log(offspring_year)) %>%
+    mutate(log.wm = log(weaning_month))
 
 orders.again
 ```
 
 ```{r}
-d <- lmer(log.oy ~ log.wm + (log.wm | order), data=orders.again)
+d <- lmer(log.oy ~ log.wm + (log.wm | order), data = orders.again)
 summary(d)
 lme4::ranef(d)
-tidy(d, conf.int=TRUE)
+tidy(d, conf.int = TRUE)
 broom::augment(d) %>%
-    ggplot(aes(x=log.wm, y=.fixed)) +
+    ggplot(aes(x = log.wm, y = .fixed)) +
     geom_line() +
-    geom_point(aes(x=log.wm, y=log.oy)) +
-    geom_line(aes(y=.fitted, color=order))
+    geom_point(aes(x = log.wm, y = log.oy, color = order)) +
+    geom_line(aes(y = .fitted, color = order)) +
+    team_theme()
 ```
 
 

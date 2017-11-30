@@ -1,4 +1,4 @@
-order,family,Genus,species,mass_g,gestation_month,newborn_g,weaning_month,wean_mass_g,AFR_mo,max_ life_month,litter_size,litters_inyear,refs
+order,family,Genus,species,mass_g,gestation_month,newborn_g,weaning_month,wean_mass_g,AFR_mo,max_life_month,litter_size,litters_inyear,refs
 Artiodactyla,Antilocapridae,Antilocapra,americana,45375,8.13,3246.36,3,8900,13.53,142,1.85,1,"1,2,6,9,23,26,27"
 Artiodactyla,Bovidae,Addax,nasomaculatus,182375,9.39,5480,6.5,NA,27.27,308,1,0.99,"1,2,17,23,26"
 Artiodactyla,Bovidae,Aepyceros,melampus,41480,6.35,5093,5.63,15900,16.66,213,1,0.95,"1,2,8,9,23,29"
