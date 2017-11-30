@@ -13,7 +13,7 @@ orders.again
 ```
 
 ```{r}
-fit <- lmer(log.oy ~ log.wm + (log.wm | order), data = orders.again)
+d <- lmer(log.oy ~ log.wm + (log.wm | order), data = orders.again)
 summary(d)
 lme4::ranef(d)
 tidy(d, conf.int = TRUE)
