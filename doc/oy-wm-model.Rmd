@@ -5,7 +5,7 @@ output: html_notebook
 
 ```{r}
 orders.again <- orders %>%
-    mutate(offspring.year = litter_size * litters_inyear) %>%
+    mutate(offspring_year = litter_size * litters_inyear) %>%
     mutate(log.oy = log(offspring_year)) %>%
     mutate(log.wm = log(weaning_month))
 
