@@ -1,0 +1,79 @@
+---
+title: "R Notebook"
+output:
+  html_document: 
+    fig_caption: true
+---
+
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(lme4)
+devtools::load_all(".")
+
+```
+
+
+```{r}
+orders <- mammals %>%
+    filter(order == 'Artiodactyla' | order == 'Carnivora' | order == 'Cetacea' | order == 'Insectivora' | order == 'Lagomorpha' | order == 'Primates' | order == 'Rodentia' )
+```
+
+
+```{r}
+```
+
+```{r}
+library(broom)
+```
+
+```{r}
+library(ggthemes)
+```
+
+
+
+```{r, fig.cap= "Caption"}
+mammals_sub
+d <- lmer(log.oy ~ log.wm + (log.wm | order), data = mammals_sub)
+summary(d)
+lme4::ranef(d)
+library(broom)
+tidy(d, conf.int = TRUE)
+broom::augment(d) %>%
+    ggplot(aes(x = log.wm, y = .fixed)) +
+    geom_line() +
+    geom_point(aes(x = log.wm, y = log.oy, color = order), alpha = 0.2) +
+    geom_line(aes(y = .fitted, color = order), alpha = 0.8) + 
+    team_theme()
+```
+
+```{r}
+install.packages("MuMIn")
+```
+
+```{r}
+base <- glm(log.oy ~ log.wm , data=orders.again)
+summary(base)
+tidy(d, conf.int=TRUE)
+broom::augment(base) %>%
+    ggplot(aes(x=log.wm, y=.fitted)) +
+    geom_line() +
+    geom_point(aes(x=log.wm, y=log.oy)) +
+    geom_line(aes(y=.fitted)) + 
+  team_theme()
+```
+
+
+
+
+```{r}
+library(MuMIn)
+MuMIn::model.sel(d, base, rank=AIC)
+```
+
+```{r}
+mammals_sub
+```
+
