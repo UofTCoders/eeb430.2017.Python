@@ -11,6 +11,8 @@ library(lme4)
 library(broom)
 library(ggthemes)
 library(MuMIn)
+
+devtools::load_all(".")
 ```
 #Import dataset from data file called 'mammals.csv' and subset to include only orders with a large sample size
 ```{r}
