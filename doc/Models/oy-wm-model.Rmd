@@ -39,8 +39,8 @@ tidy(fit, conf.int = TRUE)
 broom::augment(fit) %>%
     ggplot(aes(x = log.wm, y = .fixed)) +
     geom_line() +
-    geom_point(aes(x = log.wm, y = log.oy, color = order)) +
-    geom_line(aes(y = .fitted, color = order), alpha=0.15) +
+    geom_point(aes(x = log.wm, y = log.oy, color = order), alpha = 0.15) +
+    geom_line(aes(y = .fitted, color = order)) +
     team_theme()
 ```
 #Run linear model
