@@ -11,20 +11,11 @@ library(lme4)
 library(broom)
 library(ggthemes)
 library(MuMIn)
+
+devtools::load_all(".")
 ```
-#Import dataset from data file called 'mammals.csv' and subset to include only orders with a large sample size
-```{r}
-mammals <- mammals
-orders <- mammals %>%
-    filter(order == 'Artiodactyla' | order == 'Carnivora' | order == 'Cetacea' | order == 'Insectivora' | order == 'Lagomorpha' | order == 'Primates' | order == 'Rodentia' )
-```
-#Create log-transformed data columns for variables to be used in model
-```{r}
-orders.again <- orders %>%
-    mutate(offspring_year = litter_size * litters_inyear) %>%
-    mutate(log.oy = log(offspring_year)) %>%
-    mutate(log.wm = log(weaning_month))
-```
+
+
 #Load graph theme
 ```{r}
 team_theme <- function() {list(
@@ -41,7 +32,7 @@ team_theme <- function() {list(
 ```
 #Run linear mixed effects model
 ```{r}
-fit <- lmer(log.oy ~ log.wm + (log.wm | order), data = orders.again)
+fit <- lmer(log.oy ~ log.wm + (log.wm | order), data = mammals_sub)
 summary(fit)
 lme4::ranef(fit)
 tidy(fit, conf.int = TRUE)
