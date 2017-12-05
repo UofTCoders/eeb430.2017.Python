@@ -1,0 +1,65 @@
+---
+title: "R Notebook"
+output:
+  html_document: default
+  html_notebook: default
+---
+#Load required packages
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(lme4)
+library(broom)
+library(ggthemes)
+#install.packages("MuMIn")
+library(MuMIn)
+library(Matrix)
+devtools::load_all(".")
+```
+# Plot linear model 
+```{r, fig.cap="Caption"}
+#library(lme4)
+c <- lmer(log.oy ~ log.ml + (log.ml | order), data = mammals_sub)
+summary(c)
+lme4::ranef(c)
+library(broom)
+tidy(c, conf.int = TRUE)
+broom::augment(c) %>%
+    ggplot(aes(x = log.ml, y = .fixed)) +
+    geom_line() +
+    geom_point(aes(x = log.ml, y = log.oy, color = order), alpha = 0.15) +
+    geom_line(aes(y = .fitted, color = order), alpha = 0.8) + 
+    team_theme()+
+    theme(legend.title = element_blank())+
+    labs(x="Log (Maximum Life Span)", y="Log (Offspring per year)")
+# Make a table for the individual slopes - need to add the log.ml to the fixed effect slope which is -0.6788
+```
+# Table of slopes for each order
+```{r}
+Order <- matrix(c((-0.02095551+-0.6788), (-0.55291115+-0.6788),(0.24081831+-0.6788), (0.23992633+-0.6788), (0.21776353+-0.6788), (-0.33380489+-0.6788), (0.20916338+-0.6788)), ncol=1, byrow=TRUE)
+colnames(Order) <- c("Slope")
+rownames(Order) <- c("Artiodactyla", "Carnivora", "Cetacea", "Insectivora", "Lagomorpha", "Primates", "Rodentia")
+Order <- as.table(Order)
+Order
+```
+
+
+# Plot the general linear model 
+```{r}
+base <- glm(log.oy ~ log.ml , data=mammals_sub)
+summary(base)
+tidy(c, conf.int=TRUE)
+broom::augment(base) %>%
+    ggplot(aes(x=log.ml, y=.fitted)) +
+    geom_line() +
+    geom_point(aes(x=log.ml, y=log.oy)) +
+    geom_line(aes(y=.fitted)) + 
+    team_theme()+
+    labs(x="Log (Maximum Life Span)", y="Log (Offspring per year)")
+```
+
+# Rank the fit of the models
+```{r}
+MuMIn::model.sel(c, base, rank=AIC)
+```
+
