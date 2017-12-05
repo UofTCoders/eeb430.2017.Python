@@ -57,8 +57,19 @@ broom::augment(b) %>%
     labs(x = "log (Age of First Reproduction)", y = "log (Offspring per Year)")+
   team_theme()+
     theme(legend.title=element_blank())
+#Slope of Individual Order:
+    #Will be equal to the slope of the fixed effect plus the individual order slope. Will need to calcualte and make table for these data ponts. 
 ```
 #Compare fits of models
 ```{r}
 MuMIn::model.sel(b, base, rank=AIC)
 ```
+
+```{r}
+ smoke <- matrix(c((-0.6037+-0.07162499),(-0.6037+-0.29501976),(-0.6037+-0.11174519),(-0.6037+ 0.25183326),(-0.6037+0.42672130),(-0.6037+-0.28274597),(-0.6037+0.08258135)),ncol=1,byrow=TRUE)
+colnames(smoke) <- c("Slope")
+ rownames(smoke) <- c("Artiodactyla", "Carnivora", "Cetacea", "Insectivora", "Lagomopha", "Primates", "Rodentia")
+ smoke <- as.table(smoke)
+ smoke
+```
+
