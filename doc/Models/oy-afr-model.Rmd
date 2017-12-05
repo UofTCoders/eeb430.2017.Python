@@ -1,6 +1,8 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output:
+  html_document: default
+  html_notebook: default
 ---
 
 #Load required packages
@@ -14,19 +16,7 @@ library(MuMIn)
 
 devtools::load_all(".")
 ```
-#Import dataset from data file called 'mammals.csv' and subset to include only orders with a large sample size
-```{r}
-mammals <- mammals
-orders <- mammals %>%
-    filter(order == 'Artiodactyla' | order == 'Carnivora' | order == 'Cetacea' | order == 'Insectivora' | order == 'Lagomorpha' | order == 'Primates' | order == 'Rodentia' )
-```
-#Create log-transformed data columns for variables to be used in the model
-```{r}
-orders1 <- orders %>%
-    mutate(offspring_year = litter_size * litters_inyear) %>%
-    mutate(log.oy = log(offspring_year)) %>%
-    mutate(log.AFR = log(AFR_mo))
-```
+
 #Load graph theme
 ```{r}
 team_theme <- function() {list(
@@ -43,7 +33,7 @@ team_theme <- function() {list(
 ```
 #Run linear model
 ```{r}
-base <- glm(log.oy ~ log.AFR , data=orders1)
+base <- glm(log.oy ~ log.AFR , data=mammals_sub)
 summary(base)
 tidy(base, conf.int=TRUE)
 broom::augment(base) %>%
@@ -55,7 +45,7 @@ broom::augment(base) %>%
 ```
 #Run linear mixed effects model
 ```{r}
-b <- lmer(log.oy ~ log.AFR + (log.AFR | order), data=orders1)
+b <- lmer(log.oy ~ log.AFR + (log.AFR | order), data=mammals_sub)
 summary(b)
 lme4::ranef(b)
 tidy(b, conf.int=TRUE)
