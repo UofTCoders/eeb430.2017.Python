@@ -54,7 +54,9 @@ broom::augment(b) %>%
     geom_line() +
     geom_point(aes(x=log.AFR, y=log.oy, color = order), alpha = 0.15) +
     geom_line(aes(y=.fitted, color=order))+
-  team_theme()
+    labs(x = "log (Age of First Reproduction)", y = "log (Offspring per Year)")+
+  team_theme()+
+    theme(legend.title=element_blank())
 ```
 #Compare fits of models
 ```{r}
