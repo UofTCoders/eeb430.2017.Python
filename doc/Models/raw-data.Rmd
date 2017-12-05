@@ -1,0 +1,40 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(devtools)
+library(tidyverse)
+devtools::load_all(".")
+```
+
+```{r}
+mammals_sub
+```
+
+
+```{r}
+mammals_sub %>%
+    ggplot(aes(x=max_life_month, y=offspring.year)) +
+    geom_point(aes(color = order)) +
+    team_theme() +
+    labs(x="Parental Maximum Lifespan", y="Offspring per Year")
+```
+
+```{r}
+mammals_sub %>%
+    ggplot(aes(x=AFR_mo, y=offspring.year)) +
+    geom_point(aes(color = order)) +
+    team_theme() +
+    labs(x="Age of First Reproduction", y="Offspring per Year")
+```
+
+```{r}
+mammals_sub %>%
+    ggplot(aes(x=weaning_month, y=offspring.year)) +
+    geom_point(aes(color = order)) +
+    team_theme() +
+    labs(x="Weaning Period Length", y="Offspring per Year")
+```
+
