@@ -41,7 +41,7 @@ broom::augment(fit) %>%
     geom_line() +
     geom_point(aes(x = log.wm, y = log.oy, color = order), alpha = 0.15) +
     geom_line(aes(y = .fitted, color = order)) +
-    team_theme() + ylab("Number of offspring per year") + xlab("Weaning age")
+    team_theme() + ylab("Number of offspring per year") + xlab("Weaning age (months)")
 ```
 #Run linear model
 ```{r}
