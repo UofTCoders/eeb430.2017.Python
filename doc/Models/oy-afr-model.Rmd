@@ -58,8 +58,6 @@ broom::augment(b) %>%
     labs(x = "ln (Age of First Reproduction)", y = "ln (Offspring per Year)")+
   team_theme()+
     theme(legend.title=element_blank())
-#Slope of Individual Order:
-    #Will be equal to the slope of the fixed effect plus the individual order slope. Will need to calcualte and make table for these data ponts. 
 ```
 #Compare fits of models
 ```{r}
