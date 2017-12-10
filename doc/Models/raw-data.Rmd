@@ -10,11 +10,6 @@ devtools::load_all(".")
 ```
 
 ```{r}
-mammals_sub
-```
-
-
-```{r}
 mammals_sub %>%
     ggplot(aes(x=max_life_month, y=offspring.year)) +
     geom_point(aes(color = order)) +
