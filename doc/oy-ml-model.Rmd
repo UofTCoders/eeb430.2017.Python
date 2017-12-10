@@ -11,13 +11,12 @@ library(ggplot2)
 library(lme4)
 library(broom)
 library(ggthemes)
-#install.packages("MuMIn")
 library(MuMIn)
 library(Matrix)
 devtools::load_all(".")
 ```
 # Plot linear model 
-```{r, fig.cap="Caption"}
+```{r, fig.cap="Figure #: Relationship between the lon transformed number of offspring a mother produces per a year during her life span as predicted by the linear mixed-effects model of 7 mammalian orders. The long black line represents the overall trend where each coloured line represents the trend for each mammalian order. The dots represent the raw data points."}
 #library(lme4)
 c <- lmer(log.oy ~ log.ml + (log.ml | order), data = mammals_sub)
 summary(c)
@@ -31,9 +30,9 @@ broom::augment(c) %>%
     geom_line(aes(y = .fitted, color = order), alpha = 0.8) + 
     team_theme()+
     theme(legend.title = element_blank())+
-    labs(x="Log (Maximum Life Span)", y="Log (Offspring per year)")
-# Make a table for the individual slopes - need to add the log.ml to the fixed effect slope which is -0.6788
+    labs(x="ln (Maximum Life Span)", y="ln (Offspring per year)")
 ```
+
 # Table of slopes for each order
 ```{r}
 Order <- matrix(c((-0.02095551+-0.6788), (-0.55291115+-0.6788),(0.24081831+-0.6788), (0.23992633+-0.6788), (0.21776353+-0.6788), (-0.33380489+-0.6788), (0.20916338+-0.6788)), ncol=1, byrow=TRUE)
