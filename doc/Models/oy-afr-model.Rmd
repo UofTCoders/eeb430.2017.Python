@@ -41,6 +41,7 @@ broom::augment(base) %>%
     geom_line() +
     geom_point(aes(x=log.AFR, y=log.oy)) +
     geom_line(aes(y=.fitted)) +
+     labs(x = "ln (Age of First Reproduction)", y = "ln (Offspring per Year)")+
   team_theme()
 ```
 #Run linear mixed effects model
@@ -54,7 +55,7 @@ broom::augment(b) %>%
     geom_line() +
     geom_point(aes(x=log.AFR, y=log.oy, color = order), alpha = 0.15) +
     geom_line(aes(y=.fitted, color=order))+
-    labs(x = "log (Age of First Reproduction)", y = "log (Offspring per Year)")+
+    labs(x = "ln (Age of First Reproduction)", y = "ln (Offspring per Year)")+
   team_theme()+
     theme(legend.title=element_blank())
 #Slope of Individual Order:
