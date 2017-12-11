@@ -45,7 +45,7 @@ broom::augment(base) %>%
   team_theme()
 ```
 #Run linear mixed effects model
-```{r, fig.cap= "Figure 2: Figure 2 displays the linear mixed effects model of the ln of Age of First Reproduction versus the ln of Offspring per year. The purple line is the general linear for all of the data points. The other 7 lines are the trends for the individal orders."}
+```{r, fig.cap= "Figure 2: Figure 2 displays the linear mixed effects model of the ln of Age of First Reproduction versus the ln of Offspring per year. The x-axis is the ln transformed age of first reproduction in months. The y-axis is the ln transformed number of offspring produced on average over a year. The purple line is the general linear for all of the data points. The other 7 lines are the trends for the individal orders."}
 b <- lmer(log.oy ~ log.AFR + (log.AFR | order), data=mammals_sub)
 summary(b)
 lme4::ranef(b)
@@ -55,7 +55,7 @@ broom::augment(b) %>%
     geom_line( color = 'Purple') +
     geom_point(aes(x=log.AFR, y=log.oy, color = order), alpha = 0.15) +
     geom_line(aes(y=.fitted, color=order))+
-    labs(x = "ln (Age of First Reproduction)", y = "ln (Offspring per Year)")+
+    labs(x = "ln (Age of First Reproduction )", y = "ln (Offspring per Year)")+
   team_theme()+
     theme(legend.title=element_blank())
 
