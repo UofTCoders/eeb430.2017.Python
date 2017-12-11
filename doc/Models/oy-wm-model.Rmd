@@ -45,7 +45,7 @@ broom::augment(fit) %>%
 ```
 #Run linear model
 ```{r}
-base <- glm(log.oy ~ log.wm , data=orders.again)
+base <- glm(log.oy ~ log.wm , data=mammals_sub)
 summary(base)
 tidy(d, conf.int=TRUE)
 broom::augment(base) %>%
