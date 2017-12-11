@@ -1,0 +1,44 @@
+---
+title: "R Notebook"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(lme4)
+library(broom)
+library(ggthemes)
+library(MuMIn)
+
+devtools::load_all(".")
+```
+Results:
+
+*Offspring per Year, Age of First Repoduction Model.*
+
+The number of offspring per year was modeled against the average age of first reproduction. The model created was a general linear model that used the data points for each species. This model showed that there is a negative relationship between the age when a mammal species will first reproduce and the number of offspring produced per year. See the Firgure 2 for plotted line, and the slope of the line is -0.89404.The second model using these two variables added in a randomization effect that grouped the data points by order. This model also found that there is a negative relationship between age when a mammal species will first reproduce and the number of offspring produced per year. This trend holds true for all of the orders, as their slopes are all negative, as can be seen in Figure 2. Slopes of the lines for each of the orders are located in Table 2. These two models were then compared to each other to see what one fits the data better. From this analysis, the better model is the one that accounts for the orders. See table 1 for AIC values. 
+
+```{r, fig.cap= "Figure 2: Figure 2 displays the linear mixed effects model of the ln of Age of First Reproduction versus the ln of Offspring per year. The x-axis is the ln transformed age of first reproduction in months. The y-axis is the ln transformed number of offspring produced on average over a year. The purple line is the general linear for all of the data points. The other 7 lines are the trends for the individal orders."}
+b <- lmer(log.oy ~ log.AFR + (log.AFR | order), data=mammals_sub)
+summary(b)
+lme4::ranef(b)
+tidy(b, conf.int=TRUE)
+broom::augment(b) %>%
+    ggplot(aes(x=log.AFR, y=.fixed)) +
+    geom_line( color = 'Purple') +
+    geom_point(aes(x=log.AFR, y=log.oy, color = order), alpha = 0.15) +
+    geom_line(aes(y=.fitted, color=order))+
+    labs(x = "ln (Age of First Reproduction)", y = "ln (Offspring per Year)")+
+  team_theme()+
+    theme(legend.title=element_blank())
+
+```
+
+Discussion: 
+
+*Offspring per Year, Age of First Repoduction Model.*
+
+These results indicate that mammal species that reproduce latter in life will produce fewer offspring per year. Mammals that reporduce latter in life would be catagorized as slow under Oli's continum, while mammals that reproduce earlier on would be catagorized as fast by Oli (Oli 2004). 'Fast' mammals are ones that mature earlier on in their life history, and this early maturation would lead to them reproducing earlier on as well. This earlier reproductive maturation is associated with a decrease in individual offspring fitness (Moore *et al.* 2016). Increasing the total number of offspring produced per year could help to reduce the costs of having low individual offspring survivorship associated with earlier reporduction. 'Slow' mammals instead take a longer amount of time to reach an age where they will be able to successfully reproduce and their offspring will have a greater chance of surviving (Moore *et al.* 2016). The addition of orders in the model, shows that there is a large amount of variation in age of first reproduction and offspring per year between species within the orders. This can be seen by the slopes for each of lines of the individual orders in Table 2. The most negative slopes are those of Carnivora and Primates. These two groups have the greatest variation in both of the two traits being looked at. Most of the model lines for the orders are separated into two clusters, with Carnivora being the only order to pass through both regions. Species within carnivora fall on both the fast and slow ends of Oli's continum, with some producing many offspring each year early in life, with other species reproducing latter on. Although the results show that there is a correlation between the number of offspring produced per year and the age of first reproduction, no comment can be made on if there is any causality. It can not be stated that the timing of reproductive maturation alone determines the number of offspring produced. Thus, this subject could still use further research into it. 
