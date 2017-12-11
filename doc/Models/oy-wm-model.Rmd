@@ -47,7 +47,7 @@ broom::augment(fit) %>%
 ```{r}
 base <- glm(log.oy ~ log.wm , data=mammals_sub)
 summary(base)
-tidy(d, conf.int=TRUE)
+tidy(base, conf.int=TRUE)
 broom::augment(base) %>%
     ggplot(aes(x=log.wm, y=.fitted)) +
     geom_line() +
