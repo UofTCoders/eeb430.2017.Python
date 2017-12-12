@@ -7,3 +7,80 @@ author:
     - Saanmugi Shanmugadasan 
 output: html_document
 ---
+
+## Introduction
+
+### Parent-Offspring Conflict
+
+    In the animal kingdom, individuals should behave in a manner that maximizes their overall fitness and reproductive success. This is most often manifested in the form of behaviors meant to maximize the fitness of every offspring an individual produces over the course of their life (Marshall & Uller 2007). Resources are distributed evenly across all of a parent's offspring because a parent is equally related to each of their offspring, and thus should attempt to ensure the fitness of each offspring is maximized (Hamilton 1964). Conversely, from the perspctive of the offspring, each individual is more related to itself than any of its siblings, and thus each offspring should want more resources allocated to it than a parent is willing to provide (Trivers 1974).
+    
+    Robert Trivers discussed the dynamics of parent-offspring conflict in terms of cost-benefit ratios. At birth, the interests of the parent and offspring align, because the offspring is capable of little on its own. Thus, it is in the parent's interest to provide as much care as possible to ensure the offspring's survival. However, as the offspring grows, the cost of providing resources increases for the parent, and the benefit decreases, since the offspring is somewhat able to feed itself. From the parent's perspective, care should be terminated when its costs and benefits are equal. From the offspring's perspective, care should be terminated when its costs are double its benefits. Conflict arises when the costs are between one and two times as great as the benefits (Trivers 1974).
+    
+    Both parents and offspring have been shown to utilize manipulative tactics when conflicts arise. In squamates, mothers have been shown to actively attempt to increase egg incubation temperatures in order to accelerate hatching and increase body size at hatch. The larger offspring are more precocial, and faster hatching times mean that mothers do not have to spend as long caring for their current set of offspring (Olsson & Shine 1997). There is extensive evidence of offspring using manipulative tactics, particularly in birds. Chicks are widely known to beg for food from their parents, particularly when parents decrease the amount of care they provide (Harper 1986).
+    
+### Mammalian Life Histories
+
+    The present study utilizes a large published dataset to attempt to quantify evidence of parent-offspring conflict in mammals. The largest trade-off in the general mammalian life history involves the cost of reproduction. Investment in current reproductive efforts results in costs paid in both survival and potential future reproduction (Stearns 1989). Specific mammalian life histories can be described by the fast-slow continuum hypothesis, which places species along a continuum based on their reproductive rate and generation time. The fast end of the continuum is populated by species that mature early with high reproductive rates and short generation times, while the slow end contains species that take longer to mature, have lower reproductive rates and longer generation times (Oli 2004).
+    
+    Oli (2004) utilized published life history data from 138 mammal populations to attempt to place species along his fast-slow continuum, and found that species were evenly distributed across the entire continuum. 29 species were categorized as fast, 31 were slow, and 29 were placed centrally on the continuum. Species on either end of the continuum had a number of shared characters. The majority of fast species had relatively small body size, high fertility rates, and low survival rates. Contrarily, slow species tended to have larger body size, lower fertility rates, and higher survival rates.
+
+    Species at both ends of Oli's continuum have had their reproductive life histories examined. Moore *et al.* (2016) examined reproductive fitness in golden-mantled ground squirrels, a species that falls at the fast end of Oli's continuum. They found evidence of a trade-off between delayed age of first reproduction and offspring survival rate. By delaying their age of first reproduction, parents experienced a decrease in individual fitness, but an increase in offspring survival rate. Offspring born to parents who became reproductively active earlier had a lower survival rate, but the parents had a higher individual fitness. Hadley *et al.* (2007) studied reproductive costs in Weddell seals, a slow species on Oli's continuum. These seals are intermittent breeders, and can wait several years between breeding events. Reproductive activity was shown to be associated with a decrease in individual survival. Breeding individuals were also less likely than non-breeding individuals to breed in the next season, suggesting that the costs of reproduction are quite high.
+
+### Mammalian Gestation
+
+    The majority of investment into offspring by to placental animals occurs during gestation. There is evidence of trade-offs with respect to gestation period length in mammals. In many bat species, there is a positive correlation between gestation period length and neonate size (Kurta & Kunz 1987). Individual fitness of the parents is forfeit as gestation time increases, due to survival costs while pregnant. Thus, there is potential for parent-offspring conflict as investment into gestation increases.
+    
+    Gestation time has also been shown to vary depending on whether placental neonates are altricial or precocial. Altricial young tend to require a higher level of maternal investment for a given gestation period than precocial young. Because of this, gestation periods in species that produce altricial young are shorter (Martin & MacLarnon 1985). Production of altricial young is often associated with an increase in overall reproductive output. A species that produces altricial young will tend to have a higher reproductive rate than a similar species that produces precocial young, due to the increased costs associated with the rearing of precocial young (Hennemann 1984).
+    
+    There is evidence of a trade-off between maternal investment in gestation and lactation. It has been observed that the cost of gestation is less than that of lactation (Gittleman & Thompson 1988). This is a potential source of parent-offspring conflict, given that altricial neonates require a relatively long lactation period (Hennemann 1984). There is a high degree of variation in the relative allocation of resources to either gestation or lactation across mammals, so inferences made about energetic expenditure by the mother or parent-offspring conflict over lactation period length must consider the species' life history. Furthermore, there is evidence that many trends related to gestation could be inaccurate due to the ubiquity of neonate body mass as a measure of development during gestation. Sacher and Staffeldt (1974) argue that neonate brain mass, rather than body mass, should be used to describe trends related to gestation. The brain has the slowest development rate of any organ, and the growth of other bodily tissues is limited by, but not necessarily always equal to, the rate of brain growth. 
+    
+
+### Post-Birth Resource Allocation
+
+    The majority of parent-offspring conflict in mammals occurs post-birth. At this point in neonate development, the parent has already invested a sigificant amount of resources into their offspring, and will be attempting to decrease the amount of care they provide (Trivers 1974). As neonates grow, their energetic needs increase, and until they are effectively able to source their own nutrients, they will become increasingly dependent on their mother for nutrition via milk. Free-ranging dogs have a well-studied weaning conflict. Pups nurse from birth and weaning begins in their seventh week. At this point, the mother will refuse to nurse. It was observed that as the pups grew, their nursing attempts became more frequent, and the mothers' attempts to initiate nursing became less frequent (Paul & Bhadra 2017).
+    
+    There is evidence that female mammals will attempt to increase their milk production to accommodate larger litter sizes. Female house mice were observed to increase both the volume and nutrient content of their milk when they birthed larger litters (Kounig *et al.* 1988). However, this increase was not indefinite. The larger the litter got, the smaller the percent increase in nutrient content was. Neonates from larger litters had lower post-weaning body mass than those from smaller litters. This is evidence that parent-offspring conflict is likely more prevalent in larger litters, because it is more difficult for neonates to obtain the nutrients they require to not have a post-weaning fitness disadvantage when compared to neonates from smaller litters.
+    
+    Maternal size has a significant effect on lactation performance. In marmosets, it has been observed that smaller mothers produce milk with lower nutrient and fat content than larger mothers (Tardif *et al.* 2001). Smaller mothers also nurse their offspring less frequently. Smaller mothers are also more likely to lose further weight and less likely to be fertile in subsequent breeding seasons. This is grounds for parent-offspring conflict, because mothers are very clearly sacrificing future reproductive success to care for current offspring as well as individual health and fitness.
+    
+
+### Objectives
+
+    The present study aims to demonstrate that instances of parent-offspring conflict that are described in a small amount of mammalian species are likely to occur across a wide range of mammalian taxa. By presenting correlations between mammalian reproductive traits, we will provide evidence for parent-offspring conflict as a phenomenon that is universal within class Mammalia. Many existing studies have described isolated cases of parent-offspring conflict in mammals, but, to our knowledge, no study has examined the dynamics of parent-offspring conflict in mammals as a complete class. While the present work is not obervation-based, we will not be able to claim a causal relationship between the traits we correlate. The results we provide should be used as evidence that parent-offspring conflict is likely a universal phenomenon in mammals. Species or genus level studies should be continued in order to prove causal relationships between the traits we have correlated.
+
+## Methods
+
+### Dataset Description
+
+    The dataset utilized in this study was made available by Morgan S.K. Ernest from the Department of Biology, University of New Mexico, Albuquerque, New Mexico, 87131 USA. The dataset is a compilation of general life history characteristics of 17 placental nonvolant mammalian orders. The data was obtained from various literature sources starting from 1998 and is currently ongoing. These past literature sources have studied species from various trophic levels, and habitats, therefore in this dataset the life history characteristics were averaged to get rid of minor environmental/niche specific differences. The dataset represents all placental nonvolant mammalian orders including terrestrial and aquatic mammals, expect for the *Chiroptera* (bats) order for a total of 17 orders. The 17 orders and the number of species represented in each order in the dataset are *Artiodactyla* (161 species), *Carnivora* (197 species), *Cetacea* (55 species), *Dermoptera* (2 species), *Hydracoidea* (4 species), *Insectivora* (91 species), *Lagomorpha* (42 species), *Macroscelidea* (10 species), *Perissodactyla* (15 species), *Pholidota* (7 species), *Primates* (156 species), *Proboscidea* (2 species), *Rodentia* (665 species), *Scandentia* (7 species), *Sirenia* (5 species), *Tubulidentata* (1 species), and *Xenarthra* (20 species). The 9 life history characteristics represented in the dataset are: maximum lifespan (months) which is the oldest age recorded for a member of that species (male or female), age of first reproduction (months) which is the average age when a females first breeds, gestation time (months) which is the average length of time the fetus is in the womb, weaning age (months) which is the average age an offspring begins eating solid food , weaning mass (grams) which is the average mass of an offspring when they begins eating solid food, litter size which is the average number of offspring birthed in single liter, litters per a year which is the average number of litters birthed in a 12 month period, newborn mass (grams) which is the average weight of a newborn taken within 12 hours after birth, and adult body mass (grams) which is the average weight of non-pregnant adult females.
+    
+### Data Analysis 
+
+    Despite the fact that the original dataset contained 17 orders, we narrowed down the dataset, by including only the orders, where number of observations was more than 30.  Hence, only Rodentia, Cetacea, Insectivora, Carnivora, Lagomorpha, Primates, Artiodactyla were used in the analysis.  Additionally, we log transformed our data in order to be able to implement linear regression into our analysis.
+
+    All the modeling and statistical analyses were conducted using R version 3.4.1 (R Core Team  2017).  We analyzed the number of offspring per year, as well as the maximum life span, weaning age and the age of first reproduction using generalized linear model and mixed effects model . Glm (https://cran.r-project.org/web/packages/glm2/glm2.pdf) and lme4 (https://cran.r-project.org/web/packages/lme4/lme4.pdf) R packages were used for modeling.  Log transformed values of weaning age, maximum lifespan and age of first reproduction were used as fixed effects. Additionally, in the mixed effects model, orders were used as a random effect factor in order to account for life-history variations, as well as size differences between orders. We used the linear model because when log transformed our data showed the same trend for the three parameters. Additionally, we decided to use the mixed effects model because in our dataset the values are not independent: observations of mammals in the same order are correlated. 
+
+    We compared the two models using Akaike Information Criterion (AIC) to see if additional parameters significantly improved the fit of the model (Akaike 1973). AIC penalizes the model for additional parameters, such that with increased number of parameters, the penalty is also increasing. So, the best fit is the one with the lowest score: i.e. with the least amount of information lost in a model, compared to the real data (Akaike 1973). Since  mixed effects model was a better fit than the generalized linear model, in our results and discussion sections, we only focus on the former.
+
+## Results
+
+### Weaning Time
+
+### Age of First Reproduction
+
+### Maximum Lifespan
+
+## Discussion
+
+### Weaning Time
+
+### Age of First Reproduction
+
+### Maximum Lifespan
+
+## Literature Cited
+
+    
+
+
+
