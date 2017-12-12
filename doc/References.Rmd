@@ -1,0 +1,17 @@
+---
+title: "R Notebook"
+output:
+  html_document: default
+  html_notebook: default
+---
+##References 
+1.	Trivers R.L. 1974. Parent-Offspring Conflict.  Amer. Zool. 14:249-264.
+2.	Gittleman, J. L., and Thompson, S. D. 1988. Energy allocation in mammalian reproduction. Amer. Zool. 28:863–875.
+3.	Stearns S.C. 1989. Trade-Offs in Life-History Evolution. Func. Ecol. 3(3): 259-268.
+4.	Malmkvist J,  Sorensen D.D., Larsen T., Palme R., and  Hansen S.W. 2016. Weaning and separation stress: maternal motivation decreases with litter age and litter size in farmed mink. Appl. Anim. Behav. Sci. 181:152-159.
+5.	Hedrich H.J., and Bullock  G.R. 2004. The laboratory mice. Elsevier Academic Press. 
+6.	Sergeant, D E. 1973. Biology of white whales (*Delphinapterus leuras*) in western Hudson Bay. J. Fish. Res. Board. Can. 30:1065-1090.
+7.	Clutton-Brock T.H. 1984. Reproductive effort and terminal investment in iteroparous animals. Am. Nat. 123: 212-229.
+8.	Maestripieri D. and Hoffmann C.L. 2012. Behavior and social dynamics of rhesus macaques on Cayo Santiago. Developments in Primatology: Progress and Prospects. Springer Science+Business Media, LLC.
+9.	Gomendio M. 1990 The influence of maternal rank and infant sex on maternal investment trends in rhesus macaques: birth sex ratio, inter-birth intervals and suckling patterns. Behav. Ecol. Sociobiol. 27:365–375.
+10.	Collinge N.E. 1987. Weaning variability in semi-free-ranging Japanese macaques (Macaca fuscata). Folia Primatol (Basel). 1987;48(3-4):137-50, 
