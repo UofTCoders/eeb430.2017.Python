@@ -44,8 +44,12 @@ output: html_notebook
     
     Maternal size has a significant effect on lactation performance. In marmosets, it has been observed that smaller mothers produce milk with lower nutrient and fat content than larger mothers (Tardif *et al.* 2001). Smaller mothers also nurse their offspring less frequently. Smaller mothers are also more likely to lose further weight and less likely to be fertile in subsequent breeding seasons. This is grounds for parent-offspring conflict, because mothers are very clearly sacrificing future reproductive success to care for current offspring as well as individual health and fitness.
     
+
 ### Objectives
-We should figure out Sunday exactly what we want to say about the purpose of this stuff. Like what we're trying to prove using our trends.
+    The present study aims to demonstrate that instances of parent-offspring conflict that are described in a small amount of mammalian species are likely to occur across a wide range of mammalian taxa. By presenting correlations between mammalian reproductive traits, we will provide evidence for parent-offspring conflict as a phenomenon that is universal within class Mammalia. Many existing studies have described isolated cases of parent-offspring conflict in mammals, but, to our knowledge, no study has examined the dynamics of parent-offspring conflict in mammals as a complete class. While the present work is not obervation-based, we will not be able to claim a causal relationship between the traits we correlate. The results we provide should be used as evidence that parent-offspring conflict is likely a universal phenomenon in mammals. Species or genus level studies should be continued in order to prove causal relationships between the traits we have correlated.
+    
+### Hypotheses
+    We hypothesize that weaning time, age of first reproduction, and maximum parental lifespan will all be negatively correlated with the number of offspring a parent produces per year. 
 
 ## Literature Cited
 
