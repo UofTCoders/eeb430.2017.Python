@@ -1,11 +1,12 @@
 ---
 title: "Data Analysis"
 author: "Farida Samad-zada"
-date: '33.12.2017 '
+date: '3.12.2017 '
 output: html_document
 ---
 
-##Methods
-###Data Analysis 
+## Methods
+### Data Analysis 
 Despite the fact that the original dataset contained 17 orders, we narrowed down the dataset, by including only the orders, where number of observations was more than 30.  Hence, only Rodentia, Cetacea, Insectivora, Carnivora, Lagomorpha, Primates, Artiodactyla were used in the analysis.  Additionally, we log transformed our data in order to be able to implement linear regression into our analysis.
-All the modeling and statistical analyses were conducted using R version 3.4.1 (R Core Team  2017).  We analyzed the number of offspring per year, as well as the maximum life span, weaning age and the age of first reproduction using generalized linear model and mixed effects model . Glm and lme4 packages for used for modeling.  Log transformed values of weaning age, maximum lifespan and age of first reproduction were used as fixed effects. Additionally, in the mixed effects model, orders were used as a random effect factor in order to account for life-history variations, as well as size differences between orders.  We compared the two models using Akaike Information Criterion (AIC) to see if additional parameters significantly improved the fit of the model. Since  mixed effects model was a better fit than the generalized linear model, in our results and discussion sections, we only focus on the former. 
+All the modeling and statistical analyses were conducted using R version 3.4.1 (R Core Team  2017).  We analyzed the number of offspring per year, as well as the maximum life span, weaning age and the age of first reproduction using generalized linear model and mixed effects model . Glm (https://cran.r-project.org/web/packages/glm2/glm2.pdf) and lme4 (https://cran.r-project.org/web/packages/lme4/lme4.pdf) R packages were used for modeling.  Log transformed values of weaning age, maximum lifespan and age of first reproduction were used as fixed effects. Additionally, in the mixed effects model, orders were used as a random effect factor in order to account for life-history variations, as well as size differences between orders. We used the linear model because when log transformed our data showed the same trend for the three parameters. Additionally, we decided to use the mixed effects model because in our dataset the values are not independent: observations of mammals in the same order are correlated. 
+We compared the two models using Akaike Information Criterion (AIC) to see if additional parameters significantly improved the fit of the model (Akaike 1973). AIC penalizes the model for additional parameters, such that with increased number of parameters, the penalty is also increasing. So, the best fit is the one with the lowest score: i.e. with the least amount of information lost in a model, compared to the real data (Akaike 1973). Since  mixed effects model was a better fit than the generalized linear model, in our results and discussion sections, we only focus on the former. 
