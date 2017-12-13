@@ -145,6 +145,40 @@ broom::augment(b) %>%
 
 ## Literature Cited
 
+Gittleman J, Thompson S. 1988. Energy allocation in mammalian reproduction. *American Zoology* 28(3): 863-875.
+
+Hadley GL, Rotella JJ, Garrott RA. 2007. Evaluation of reproductive costs for Weddell seals in Erebus Bay, Antarctica.     *Journal of Animal Ecology* 76(3): 448-458.
+
+Hamilton WD. 1964. The genetical evolution of social behavior. I. *J. Theoret. Biol.* 7: 1-16.
+
+Harper AB. 1986. The evolution of begging: Sibling competition and parent-offspring conflict. *The American Naturalist*     128(1): 99-114.
+
+Hennemann WW. 1984. Intrinsic rates of natural increase of altricial and precocial eutherian mammals: the potential price     of precociality. *Oikos* 43(3): 363-368.
+
+Kounig B, Riester J, Markl H. 1988. Maternal care in house mice (*Mus musculus*): II. The energy cost of lactation as a     function of litter size. *Journal of Zoology* 216(2): 195-210.
+
+Kurta A, Kunz T. 1987. Size of bats at birth and maternal investment during pregnancy. *Zoological Symposium* 57: 79-106.
+
+Marshall DJ, Uller T. 2007. When is a maternal effect adaptive? *Oikos* 116: 1957-1963.
+
+Martin R, MacLarnon A. 1985. Gestation period, neonatal size and maternal investment in placental mammals. *Nature*         313(17): 220-223.
+
+Moore JF, Wells CP, Van Vuren DH, Oli MK. 2016. Who pays? intra- vs inter-generational costs of reproduction. *Ecosphere*     7(2): e01236.
+
+Oli M. 2004. The fast-slow continuum and mammalian life-history patterns: an empirical evaluation. *Basic and Applied        Ecology* 5(5): 449-463.
+
+Olsson M, Shine R. 1997. The seasonal timing of oviposition in sand lizards (*Lacerta agilis*): Why earlier clutches are
+    better. *Evolution* 52: 1861-1864.
+
+Paul M, Bhadra A. 2017. Selfish pups: weaning conflict and milk theft in free-ranging dogs. *PLoS One* 12(2): e0170590.
+
+Sacher G, Staffeldt E. 1974. Relation of gestation time to brain weight for placental mammals: implications for the         theory of vertebrate growth. *The American Naturalist* 108(963): 593-615.
+
+Stearns SC. 1989. Trade-offs in life history evolution. *Functional Ecology* 3(3): 259-268.
+
+Tardif SD, Power M, Oftedal OT, Power RA, Layne DG. 2001. Lactation, maternal behavior and infant growth in common         marmoset monkeys (*Callithrix jacchus*): effects of maternal size and litter size. *Behavioral Ecology and               Sociobiology* 51(1): 17-25.
+
+Trivers RL. 1974. Parent-offspring conflict. *American Zoologist* 14(1): 249-264.
     
 
 
