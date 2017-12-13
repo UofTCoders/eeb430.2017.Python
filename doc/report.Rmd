@@ -133,7 +133,6 @@ broom::augment(b) %>%
   Our study generated a linear mixed effects model which revealed that there is a negative correlation between the number of number of offspring produced in a year and the lifespan of the mother (Figure 3). Using orders as the random effect, the linear mixed effects model was a better fit for the data with a lower AIC rank of 714.4 in comparison to the generalized linear model which had a AIC rank of 837.0 (Table 1). Though this negative correlation is seen for all 7 mammalian orders, the correlation for some orders were stronger since the magnitude of their slopes were more negative, such *Carnivora* (-1.2317), *Primates* (-1.01260), and *Artiodactyla* (-0.6997) (Table 1). Whereas for others the magnitude of their slopes were less negative such as, *Cetacea* (-0.4379), *Insectivora* (-0.4388), *Lagomorpha* (-0.4610), and *Rodentia* (-0.4696) (Table 1) with the biggest difference between the most negative slope, *Carnivora* and the least negative slope, *Cetacea* is about 0.7937294.
   
 ```{r, fig.cap="Figure 3: Relationship between the lon transformed number of offspring a mother produces per a year during her life span as predicted by the linear mixed-effects model of 7 mammalian orders. The long black line represents the overall trend where each coloured line represents the trend for each mammalian order. The dots represent the raw data points."}
-#library(lme4)
 c <- lmer(log.oy ~ log.ml + (log.ml | order), data = mammals_sub)
 summary(c)
 lme4::ranef(c)
