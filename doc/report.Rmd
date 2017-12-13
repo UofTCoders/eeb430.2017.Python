@@ -7,6 +7,32 @@ author:
     - Saanmugi Shanmugadasan 
 output: html_document
 ---
+```{r}
+library(lme4)
+library(ggplot2)
+library(ggthemes)
+library(tidyverse)
+library(broom)
+
+
+devtools::load_all(".")
+
+team_theme <- function() {list(
+  
+  theme(axis.line = element_line(color = "black"),
+        text = element_text(size = 8, family = "Times"),
+        panel.background = element_rect(fill = 'white', colour = 'black'),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.title = element_text(colour =  "black", size = 14, hjust = 0.5),
+        legend.text = element_text(size = 12, family = "Times")),
+  scale_colour_colorblind())
+}
+```
+
+
+
+
 ## Abstract
 
    Parent-offspring conflict theory states that individuals behave in a manner that optimizes their overall fitness and reproductive success, yet this optimum doesn’t always align between the parent and the offspring leading to conflict (Marshall & Uller 2007). Most studies have focused on studying parent-offspring conflict in mammalian species, but these studies have focused on specific orders or species and thus their conclusions cannot be generalized for how parents and offspring’s act in mammals as a whole. In this study, we examined parent-offspring conflict by generating a linear mixed effects model and plotting the relationship between the number of offspring produced per a year with weaning time (months), age of first reproduction, and the maximum life span of the mother across 7 mammalian orders, *Artiodactyla*, *Carnivora*, *Cetacea*, *Insectivora*, *Lagomorpha*, *Primates*, and *Rodentia*. We found that there is a negative correlation between the number of offspring produced per a year with weaning time, age of first reproduction, and maximum life span for all 7 mammalian orders. 
@@ -72,25 +98,6 @@ output: html_document
    According to the prediction of mixed-effects linear model, there is a negative relationship between the weaning age and the number of offspring across all orders (Fig. 1). Moreover, using orders as random effects significantly improves the model fit, compared to using generalized linear model, as indicated by the lower AIC value (Table 1). The overall linear trend across all orders appears to be negative for the weaning-number of offspring relationship. However, Rodentia, Insectivora and Primates show the most negative relationship with slopes being higher than 0.6 (Table 2). Additionally, despite all trends being negative there is order-specific variation in both the number of offspring, and weaning age (Fig. 1). Larger mammals tend to have less offspring and delay the weaning time, whereas small mammals produce more offspring, and wean fairly early (Fig. 1).
 
 ```{r}
-library(lme4)
-library(ggplot2)
-library(ggthemes)
-library(tidyverse)
-library(broom)
-
-team_theme <- function() {list(
-  
-  theme(axis.line = element_line(color = "black"),
-        text = element_text(size = 8, family = "Times"),
-        panel.background = element_rect(fill = 'white', colour = 'black'),
-        panel.grid.minor = element_blank(),
-        panel.grid.major = element_blank(),
-        plot.title = element_text(colour =  "black", size = 14, hjust = 0.5),
-        legend.text = element_text(size = 12, family = "Times")),
-  scale_colour_colorblind())
-}
-
-
 fit <- lmer(log.oy ~ log.wm + (log.wm | order), data = mammals_sub)
 summary(fit)
 lme4::ranef(fit)
