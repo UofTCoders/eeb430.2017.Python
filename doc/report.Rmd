@@ -35,7 +35,7 @@ team_theme <- function() {list(
 
 ## Abstract
 
-   Parent-offspring conflict theory states that individuals behave in a manner that optimizes their overall fitness and reproductive success, yet this optimum doesn’t always align between the parent and the offspring leading to conflict (Marshall & Uller 2007). Most studies have focused on studying parent-offspring conflict in mammalian species, but these studies have focused on specific orders or species and thus their conclusions cannot be generalized for how parents and offspring’s act in mammals as a whole. In this study, we examined parent-offspring conflict by generating a linear mixed effects model and plotting the relationship between the number of offspring produced per a year with weaning time (months), age of first reproduction, and the maximum life span of the mother across 7 mammalian orders, *Artiodactyla*, *Carnivora*, *Cetacea*, *Insectivora*, *Lagomorpha*, *Primates*, and *Rodentia*. We found that there is a negative correlation between the number of offspring produced per a year with weaning time, age of first reproduction, and maximum life span for all 7 mammalian orders. 
+   Parent-offspring conflict theory states that individuals behave in a manner that optimizes their overall fitness and reproductive success, yet this optimum doesn’t always align between the parent and the offspring leading to conflict (Marshall & Uller 2007). Most studies have focused on studying parent-offspring conflict in mammalian species, but these studies have focused on specific orders or species and thus their conclusions cannot be generalized for how parents and offspring's act in mammals as a whole. In this study, we examined parent-offspring conflict by generating a linear mixed effects model and plotting the relationship between the number of offspring produced per a year with weaning time (months), age of first reproduction, and the maximum life span of the mother across 7 mammalian orders, *Artiodactyla*, *Carnivora*, *Cetacea*, *Insectivora*, *Lagomorpha*, *Primates*, and *Rodentia*. We found that there is a negative correlation between the number of offspring produced per a year with weaning time, age of first reproduction, and maximum life span for all 7 mammalian orders. 
 
 ## Introduction
 
@@ -97,17 +97,17 @@ team_theme <- function() {list(
 
    According to the prediction of mixed-effects linear model, there is a negative relationship between the weaning age and the number of offspring across all orders (Fig. 1). Moreover, using orders as random effects significantly improves the model fit, compared to using generalized linear model, as indicated by the lower AIC value (Table 1). The overall linear trend across all orders appears to be negative for the weaning-number of offspring relationship. However, Rodentia, Insectivora and Primates show the most negative relationship with slopes being higher than 0.6 (Table 2). Additionally, despite all trends being negative there is order-specific variation in both the number of offspring, and weaning age (Fig. 1). Larger mammals tend to have less offspring and delay the weaning time, whereas small mammals produce more offspring, and wean fairly early (Fig. 1).
 
-```{r}
+```{r,fig.cap = "Figure 1: Figure 1 displays the linear mixed effects model of the ln of the Weaning age versus the ln of Offspring per year. The x-axis is the ln transformed age of weaning in months. The y-axis is the ln transformed number of offspring produced on average over a year. The purple line is the general linear for all of the data points. The other 7 lines are the trends for the individal orders." }
 fit <- lmer(log.oy ~ log.wm + (log.wm | order), data = mammals_sub)
 summary(fit)
 lme4::ranef(fit)
 tidy(fit, conf.int = TRUE)
 broom::augment(fit) %>%
     ggplot(aes(x = log.wm, y = .fixed)) +
-    geom_line() +
+    geom_line(color = "Purple") +
     geom_point(aes(x = log.wm, y = log.oy, color = order), alpha = 0.15) +
     geom_line(aes(y = .fitted, color = order)) +
-    team_theme() + ylab("ln(Number of offspring per year)") + xlab("ln(Weaning age (months))")
+    team_theme() + ylab("ln(Number of offspring per year)") + xlab("ln(Weaning age (months))") + theme(legend.title=element_blank())
 ```
 
 ### Age of First Reproduction
