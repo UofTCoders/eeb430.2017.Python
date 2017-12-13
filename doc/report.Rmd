@@ -148,7 +148,7 @@ broom::augment(c) %>%
     theme(legend.title = element_blank())+
     labs(x="ln (Maximum Life Span)", y="ln (Offspring per year)")
 ```
- ```{r, fig.cap= "Table 1: AIC values."}
+```{r, fig.cap= "Table 1: AIC values."}
 AIC <- matrix(c((942.1),(1028.6),
                 (807.1),(1047.6),
                 (714.4),(837.0)), ncol = 2, byrow = TRUE)
@@ -157,7 +157,7 @@ rownames(AIC) <- c("Weaning", "Age of First Reproduction", "Max Life Span")
 AIC <- as.table(AIC)
 AIC
 ```
- ```{r, fig.cap= "Table 2: Linear regression slopes for the 3 plots."}
+```{r, fig.cap= "Table 2: Linear regression slopes for the 3 plots."}
 Order <- matrix(c((-0.6086379),(-0.6037+-0.07162499),(-0.02095551+-0.6788),
                   (-0.41077695),(-0.6037+-0.29501976), (-0.55291115+-0.6788),
                   (-0.59534164), (-0.6037+-0.11174519), (0.24081831+-0.6788), 
