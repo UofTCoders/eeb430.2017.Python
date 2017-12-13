@@ -97,7 +97,7 @@ team_theme <- function() {list(
 
    According to the prediction of mixed-effects linear model, there is a negative relationship between the weaning age and the number of offspring across all orders (Fig. 1). Moreover, using orders as random effects significantly improves the model fit, compared to using generalized linear model, as indicated by the lower AIC value (Table 1). The overall linear trend across all orders appears to be negative for the weaning-number of offspring relationship. However, Rodentia, Insectivora and Primates show the most negative relationship with slopes being higher than 0.6 (Table 2). Additionally, despite all trends being negative there is order-specific variation in both the number of offspring, and weaning age (Fig. 1). Larger mammals tend to have less offspring and delay the weaning time, whereas small mammals produce more offspring, and wean fairly early (Fig. 1).
 
-```{r,fig.cap = "Figure 1: Figure 1 displays the linear mixed effects model of the ln of the Weaning age versus the ln of Offspring per year. The x-axis is the ln transformed age of weaning in months. The y-axis is the ln transformed number of offspring produced on average over a year. The purple line is the general linear for all of the data points. The other 7 lines are the trends for the individal orders." }
+```{r,fig.cap = "Figure 1: Figure 1 displays the linear mixed effects model of the ln of the Weaning age versus the ln of Offspring per year. The x-axis is the ln transformed age of weaning in months. The y-axis is the ln transformed number of offspring produced on average over a year. The purple line is the general linear for all of the data points. The other 7 lines are the trends for the individal orders. The dots represent the raw data points." }
 fit <- lmer(log.oy ~ log.wm + (log.wm | order), data = mammals_sub)
 summary(fit)
 lme4::ranef(fit)
@@ -113,7 +113,7 @@ broom::augment(fit) %>%
 ### Age of First Reproduction
    The number of offspring per year was modeled against the average age of first reproduction. The model created was a general linear model that used the data points for each species. This model showed that there is a negative relationship between the age when a mammal species will first reproduce and the number of offspring produced per year. See the Firgure 2 for plotted line, and the slope of the line is -0.89404.The second model using these two variables added in a randomization effect that grouped the data points by order. This model also found that there is a negative relationship between age when a mammal species will first reproduce and the number of offspring produced per year. This trend holds true for all of the orders, as their slopes are all negative, as can be seen in Figure 2. Slopes of the lines for each of the orders are located in Table 2. These two models were then compared to each other to see what one fits the data according to mixed effects model. From this analysis, the model that accounts for the orders has the lower AIC value. See table 1 for AIC values. 
 
-```{r, fig.cap= "Figure 2: Figure 2 displays the linear mixed effects model of the ln of Age of First Reproduction versus the ln of Offspring per year. The x-axis is the ln transformed age of first reproduction in months. The y-axis is the ln transformed number of offspring produced on average over a year. The purple line is the general linear for all of the data points. The other 7 lines are the trends for the individal orders."}
+```{r, fig.cap= "Figure 2: Figure 2 displays the linear mixed effects model of the ln of Age of First Reproduction versus the ln of Offspring per year. The x-axis is the ln transformed age of first reproduction in months. The y-axis is the ln transformed number of offspring produced on average over a year. The purple line is the general linear for all of the data points. The other 7 lines are the trends for the individal orders. The dots represent the raw data points."}
 b <- lmer(log.oy ~ log.AFR + (log.AFR | order), data=mammals_sub)
 summary(b)
 lme4::ranef(b)
@@ -137,6 +137,7 @@ broom::augment(b) %>%
 c <- lmer(log.oy ~ log.ml + (log.ml | order), data = mammals_sub)
 summary(c)
 lme4::ranef(c)
+library(broom)
 tidy(c, conf.int = TRUE)
 broom::augment(c) %>%
     ggplot(aes(x = log.ml, y = .fixed)) +
@@ -147,8 +148,7 @@ broom::augment(c) %>%
     theme(legend.title = element_blank())+
     labs(x="ln (Maximum Life Span)", y="ln (Offspring per year)")
 ```
-
-```{r, fig.cap= "Table 1: AIC values"}
+ ```{r, fig.cap= "Table 1: AIC values."}
 AIC <- matrix(c((942.1),(1028.6),
                 (807.1),(1047.6),
                 (714.4),(837.0)), ncol = 2, byrow = TRUE)
@@ -157,7 +157,7 @@ rownames(AIC) <- c("Weaning", "Age of First Reproduction", "Max Life Span")
 AIC <- as.table(AIC)
 AIC
 ```
-```{r, fig.cap="Table 2: Linear regression slopes for the 3 plots"}
+ ```{r, fig.cap= "Table 2: Linear regression slopes for the 3 plots."}
 Order <- matrix(c((-0.6086379),(-0.6037+-0.07162499),(-0.02095551+-0.6788),
                   (-0.41077695),(-0.6037+-0.29501976), (-0.55291115+-0.6788),
                   (-0.59534164), (-0.6037+-0.11174519), (0.24081831+-0.6788), 
@@ -170,7 +170,6 @@ rownames(Order) <- c("Artiodactyla", "Carnivora", "Cetacea", "Insectivora", "Lag
 Order <- as.table(Order)
 Order
 ```
-
 ## Discussion
 
 ### Weaning Time
