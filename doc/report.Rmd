@@ -147,6 +147,7 @@ broom::augment(c) %>%
     theme(legend.title = element_blank())+
     labs(x="ln (Maximum Life Span)", y="ln (Offspring per year)")
 ```
+
 ```{r, fig.cap= "Table 1: AIC values"}
 AIC <- matrix(c((942.1),(1028.6),
                 (807.1),(1047.6),
@@ -169,6 +170,7 @@ rownames(Order) <- c("Artiodactyla", "Carnivora", "Cetacea", "Insectivora", "Lag
 Order <- as.table(Order)
 Order
 ```
+
 ## Discussion
 
 ### Weaning Time
