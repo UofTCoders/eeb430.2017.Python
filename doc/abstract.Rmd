@@ -1,0 +1,8 @@
+---
+title: "R Notebook"
+output:
+  html_document: default
+  html_notebook: default
+---
+Abstract
+Parent-offspring conflict theory states that individuals behave in a manner that optimizes their overall fitness and reproductive success, yet this optimum doesn’t always align between the parent and the offspring leading to conflict (Marshall & Uller 2007). Most studies have focused on studying parent-offspring conflict in mammalian species, but these studies have focused on specific orders or species and thus their conclusions cannot be generalized for how parents and offspring’s act in mammals as a whole. In this study, we examined parent-offspring conflict by generating a linear mixed effects model and plotting the relationship between the number of offspring produced per a year with weaning time (months), age of first reproduction, and the maximum life span of the mother across 7 mammalian orders, *Artiodactyla*, *Carnivora*, *Cetacea*, *Insectivora*, *Lagomorpha*, *Primates*, and *Rodentia*. We found that there is a negative correlation between the number of offspring produced per a year with weaning time, age of first reproduction, and maximum life span for all 7 mammalian orders.   
