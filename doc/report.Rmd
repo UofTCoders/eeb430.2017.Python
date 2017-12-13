@@ -130,6 +130,35 @@ broom::augment(b) %>%
 ```
 ### Maximum Lifespan
 
+
+
+
+```{r, fig.cap= "Table 1: AIC values"}
+AIC <- matrix(c((942.1),(1028.6),
+                (807.1),(1047.6),
+                (714.4),(837.0)), ncol = 2, byrow = TRUE)
+colnames(AIC) <- c("AIC Values", "Base Values")
+rownames(AIC) <- c("Weaning", "Age of First Reproduction", "Max Life Span")
+AIC <- as.table(AIC)
+AIC
+```
+```{r, fig.cap="Table 2: Linear regression slopes for the 3 plots"}
+Order <- matrix(c((-0.6086379),(-0.6037+-0.07162499),(-0.02095551+-0.6788),
+                  (-0.41077695),(-0.6037+-0.29501976), (-0.55291115+-0.6788),
+                  (-0.59534164), (-0.6037+-0.11174519), (0.24081831+-0.6788), 
+                  (-0.70741582),(-0.6037+ 0.25183326),(0.23992633+-0.6788), 
+                  (-0.66624698),(-0.6037+0.42672130),(0.21776353+-0.6788), 
+                  (-0.68861395), (-0.6037+-0.28274597), (-0.33380489+-0.6788), 
+                  (-0.76012677), (-0.6037+0.08258135), (0.20916338+-0.6788)), ncol=3, byrow=TRUE)
+colnames(Order) <- c("Slope for Weaning", "Slope for Age of First Reprodution", "Slope for Max Life Span")
+rownames(Order) <- c("Artiodactyla", "Carnivora", "Cetacea", "Insectivora", "Lagomorpha", "Primates", "Rodentia")
+Order <- as.table(Order)
+Order
+```
+
+
+
+
 ## Discussion
 
 ### Weaning Time
